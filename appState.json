@@ -22,7 +22,7 @@
         "children": [],
         "isRemovable": true,
         "filePath": "hiru1028_Mergetest/lambda100.js",
-        "code": "exports.handler = function(event, context, callback) {\n    // cmnt \n    callback(null, {\"message\": \"Successfully executed\"});\n}",
+        "code": "let AWS = require('aws-sdk');\nconst s3 = new AWS.S3();\n\nexports.handler = function (event, context, callback) {\n    s3.listObjects({\n        'Bucket': 'as2-test-lahiru',\n        'MaxKeys': 10,\n        'Prefix': ''\n    }).promise()\n        .then(data => {\n            console.log(data);           // successful response\n            /*\n            data = {\n                Contents: [\n                    {\n                       ETag: \"\\\"70ee1738b6b21e2c8a43f3a5ab0eee71\\\"\",\n                       Key: \"example1.jpg\",\n                       LastModified: \"<Date Representation>\",\n                       Owner: {\n                          DisplayName: \"myname\",\n                          ID: \"12345example25102679df27bb0ae12b3f85be6f290b936c4393484be31bebcc\"\n                       },\n                       Size: 11,\n                       StorageClass: \"STANDARD\"\n                    },\n                    // {...}\n                ]\n            }\n            */\n        })\n        .catch(err => {\n            console.log(err, err.stack); // an error occurred\n        });\n    // cmnt \n    s3.putObject({\n        \"Body\": \"1\",\n        \"Bucket\": \"aws-amplify-hotspaces\",\n        \"Key\": \"10\"\n    })\n        .promise()\n        .then(data => {\n            console.log(data);           // successful response\n            /*\n            data = {\n                ETag: \"\\\"6805f2cfc46c0f04559748bb039d69ae\\\"\",\n                VersionId: \"pSKidl4pHBiNwukdbcPXAIs.sshFFOc0\"\n            }\n            */\n        })\n        .catch(err => {\n            console.log(err, err.stack); // an error occurred\n        });\n    s3.copyObject({\n        'Bucket': \"com.sigma.test.318300609668.google11681355567701687.us-east-1\",\n        'CopySource': `/com.sigma.test.318300609668.chamath.us-east-1/s`,\n        'Key': \"s\"\n    }).promise()\n        .then(data => {\n            console.log(data);           // successful response\n            /*\n            data = {\n                CopyObjectResult: {\n                    ETag: \"\\\"6805f2cfc46c0f04559748bb039d69ae\\\"\",\n                    LastModified: \"<Date Representation>\"\n                }\n            }\n            */\n        })\n        .catch(err => {\n            console.log(err, err.stack); // an error occurred\n        });\n\n    callback(null, { \"message\": \"Successfully executed\" });\n}",
         "config": {
           "runtime": "nodejs8.10",
           "handler": "handler",
@@ -39,7 +39,44 @@
       "7d1bb23f-b159-4e9b-81fb-f82b18724e88"
     ],
     "currentFileId": "7d1bb23f-b159-4e9b-81fb-f82b18724e88",
-    "resources": {},
+    "resources": {
+      "s3as2TestLahiru": {
+        "name": "s3as2TestLahiru",
+        "type": "S3",
+        "config": {
+          "mode": 1,
+          "bucket": {
+            "region": "us-east-1",
+            "name": "as2-test-lahiru"
+          }
+        }
+      },
+      "s3awsAmplifyHotspaces": {
+        "name": "s3awsAmplifyHotspaces",
+        "type": "S3",
+        "config": {
+          "mode": 1,
+          "bucket": {
+            "region": "us-east-1",
+            "name": "aws-amplify-hotspaces"
+          }
+        }
+      },
+      "s3comsigmatest318300609668chamathusEast1": {
+        "name": "s3comsigmatest318300609668chamathusEast1",
+        "type": "S3",
+        "config": {
+          "mode": 1,
+          "bucket": {
+            "region": "us-east-1",
+            "name": "com.sigma.test.318300609668.chamath.us-east-1"
+          },
+          "destinationBucket": {
+            "name": "com.sigma.test.318300609668.google11681355567701687.us-east-1"
+          }
+        }
+      }
+    },
     "customTemplate": {
       "dialect": null,
       "definitions": null
@@ -56,10 +93,22 @@
     ],
     "packageJSON": {
       "dependencies": {
+        "mysql": {
+          "name": "mysql",
+          "version": "2.17.1",
+          "language": "javascript"
+        },
         "test": {
           "name": "test",
           "version": "0.6.0",
           "language": "javascript"
+        },
+        "aws-sdk": {
+          "name": "aws-sdk",
+          "language": "javascript",
+          "version": "2.176.0",
+          "dev": true,
+          "notRemovable": false
         }
       }
     }
@@ -71,7 +120,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1572263176523
+    "lastSave": 1572263296121
   },
   "VCS_STATE": {
     "provider": "GitHub",
