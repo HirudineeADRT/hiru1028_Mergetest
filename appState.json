@@ -22,7 +22,7 @@
         "children": [],
         "isRemovable": true,
         "filePath": "hiru1028_Mergetest/lambda100.js",
-        "code": "exports.handler = function(event, context, callback) {\n    //test\n    callback(null, {\"message\": \"Successfully executed\"});\n}",
+        "code": "exports.handler = function(event, context, callback) {\n    \n    callback(null, {\"message\": \"Successfully executed\"});\n}",
         "config": {
           "runtime": "nodejs8.10",
           "handler": "handler",
@@ -30,16 +30,7 @@
           "memory": 128,
           "layers": []
         },
-        "triggers": [],
-        "testCases": {
-          "583c56a0-c8fe-46e0-a08e-9244774c23bc": {
-            "id": "583c56a0-c8fe-46e0-a08e-9244774c23bc",
-            "name": "Test event",
-            "functionId": "7d1bb23f-b159-4e9b-81fb-f82b18724e88",
-            "event": "{\r\n    \"key1\": \"value1\",\r\n    \"key2\": \"value2\",\r\n    \"key3\": \"value3\"\r\n}",
-            "eventTemplate": "hello-world"
-          }
-        }
+        "triggers": []
       }
     },
     "rootNode": "56fda8d8-cbc7-458c-a465-6f3040f88c9d",
@@ -73,7 +64,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1572259780547
+    "lastSave": 1572259833977
   },
   "VCS_STATE": {
     "provider": "GitHub",
