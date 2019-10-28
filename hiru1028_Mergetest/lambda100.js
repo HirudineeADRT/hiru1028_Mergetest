@@ -1,8 +1,20 @@
 let AWS = require('aws-sdk');
+const cognito_idp = new AWS.CognitoIdentityServiceProvider();
 const s3 = new AWS.S3();
 
 exports.handler = function (event, context, callback) {
-    s3.listObjects({
+    cognito_idp.listUsers({
+        UserPoolId: process.env.UserPoolId_cognitottt,
+        Limit: 10
+    }, function (error, data) {
+        if (error) {
+            // implement error handling logic here
+            throw error;
+        }
+        // your logic goes within this block
+    });
+    // cmnt 
+     s3.listObjects({
         'Bucket': 'as2-test-lahiru',
         'MaxKeys': 10,
         'Prefix': ''
@@ -69,6 +81,5 @@ exports.handler = function (event, context, callback) {
         .catch(err => {
             console.log(err, err.stack); // an error occurred
         });
-
     callback(null, { "message": "Successfully executed" });
 }
