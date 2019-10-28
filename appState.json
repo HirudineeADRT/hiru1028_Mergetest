@@ -56,11 +56,6 @@
     ],
     "packageJSON": {
       "dependencies": {
-        "mysql": {
-          "name": "mysql",
-          "version": "2.17.1",
-          "language": "javascript"
-        },
         "test": {
           "name": "test",
           "version": "0.6.0",
@@ -76,7 +71,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1572263152645
+    "lastSave": 1572263176523
   },
   "VCS_STATE": {
     "provider": "GitHub",
