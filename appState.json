@@ -61,11 +61,11 @@
   "PROJECT_META": {
     "projectName": "hiru1028_Mergetest",
     "projectDescription": "",
-    "projectVersion": "1.0.0",
+    "projectVersion": "2.0.0",
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1572260216303
+    "lastSave": 1572262967605
   },
   "VCS_STATE": {
     "provider": "GitHub",
