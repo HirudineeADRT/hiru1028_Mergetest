@@ -1,6 +1,8 @@
 {
   "name": "hiru1028_Mergetest",
   "version": "2.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "mysql": "2.17.1"
+  },
   "devDependencies": {}
 }
