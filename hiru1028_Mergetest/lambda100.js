@@ -1,7 +1,10 @@
+// successful response indunil 5
 let AWS = require('aws-sdk');
 const cognito_idp = new AWS.CognitoIdentityServiceProvider();
 const s3 = new AWS.S3();
 
+const s3 = new AWS.S3();
+// successful response indunil 1
 exports.handler = function (event, context, callback) {
     cognito_idp.listUsers({
         UserPoolId: process.env.UserPoolId_cognitottt,
@@ -14,13 +17,13 @@ exports.handler = function (event, context, callback) {
         // your logic goes within this block
     });
     // cmnt 
-     s3.listObjects({
+    s3.listObjects({
         'Bucket': 'as2-test-lahiru',
         'MaxKeys': 10,
         'Prefix': ''
     }).promise()
         .then(data => {
-            console.log(data);           // successful response
+            console.log(data);           
             /*
             data = {
                 Contents: [
@@ -41,9 +44,10 @@ exports.handler = function (event, context, callback) {
             */
         })
         .catch(err => {
-            console.log(err, err.stack); // an error occurred
+            console.log(err, err.stack); 
         });
     // cmnt 
+    // successful response indunil 2
     s3.putObject({
         "Body": "1",
         "Bucket": "aws-amplify-hotspaces",
@@ -60,15 +64,16 @@ exports.handler = function (event, context, callback) {
             */
         })
         .catch(err => {
-            console.log(err, err.stack); // an error occurred
+            console.log(err, err.stack); 
         });
+        // successful response indunil 3
     s3.copyObject({
         'Bucket': "com.sigma.test.318300609668.google11681355567701687.us-east-1",
         'CopySource': `/com.sigma.test.318300609668.chamath.us-east-1/s`,
         'Key': "s"
     }).promise()
         .then(data => {
-            console.log(data);           // successful response
+            console.log(data);           
             /*
             data = {
                 CopyObjectResult: {
@@ -78,8 +83,12 @@ exports.handler = function (event, context, callback) {
             }
             */
         })
+        // successful response indunil 7
         .catch(err => {
-            console.log(err, err.stack); // an error occurred
+            console.log(err, err.stack); 
         });
+        // successful response indunil 4
+
     callback(null, { "message": "Successfully executed" });
 }
+// successful response indunil 6
