@@ -22,7 +22,7 @@
         "children": [],
         "isRemovable": true,
         "filePath": "hiru1028_Mergetest/lambda100.js",
-        "code": "exports.handler = function(event, context, callback) {\n    // cmnt \n    callback(null, {\"message\": \"Successfully executed\"});\n}",
+        "code": "exports.handler = function (event, context, callback) {\n    // cmnt \n    callback(null, { \"message\": \"Successfully executed\" });\n}",
         "config": {
           "runtime": "nodejs8.10",
           "handler": "handler",
@@ -32,19 +32,19 @@
         },
         "triggers": [],
         "testCases": {
-          "8a2d9161-3dcc-45d4-ac56-764c883c5e1e": {
-            "id": "8a2d9161-3dcc-45d4-ac56-764c883c5e1e",
-            "name": "Test event",
-            "functionId": "7d1bb23f-b159-4e9b-81fb-f82b18724e88",
-            "event": "{\r\n    \"version\": \"1.0\",\r\n    \"session\": {\r\n        \"new\": false,\r\n        \"sessionId\": \"amzn1.echo-api.session.123456789012\",\r\n        \"application\": {\r\n            \"applicationId\": \"amzn1.ask.skill.987654321\"\r\n        },\r\n        \"attributes\": {},\r\n        \"user\": {\r\n            \"userId\": \"amzn1.ask.account.testUser\"\r\n        }\r\n    },\r\n    \"context\": {\r\n        \"System\": {\r\n            \"application\": {\r\n                \"applicationId\": \"amzn1.ask.skill.987654321\"\r\n            },\r\n            \"user\": {\r\n                \"userId\": \"amzn1.ask.account.testUser\"\r\n            },\r\n            \"device\": {\r\n                \"supportedInterfaces\": {\r\n                    \"AudioPlayer\": {}\r\n                }\r\n            }\r\n        }\r\n    },\r\n    \"request\": {\r\n        \"type\": \"SessionEndedRequest\",\r\n        \"requestId\": \"amzn1.echo-api.request.1234\",\r\n        \"timestamp\": \"2016-10-27T21:11:41Z\",\r\n        \"locale\": \"en-US\",\r\n        \"reason\": \"USER_INITIATED\"\r\n    }\r\n}",
-            "eventTemplate": "alexa-skills-kit-end-session"
-          },
           "583c56a0-c8fe-46e0-a08e-9244774c23bc": {
             "id": "583c56a0-c8fe-46e0-a08e-9244774c23bc",
             "name": "Test event",
             "functionId": "7d1bb23f-b159-4e9b-81fb-f82b18724e88",
             "event": "{\r\n    \"key1\": \"value1\",\r\n    \"key2\": \"value2\",\r\n    \"key3\": \"value3\"\r\n}",
             "eventTemplate": "hello-world"
+          },
+          "8a2d9161-3dcc-45d4-ac56-764c883c5e1e": {
+            "id": "8a2d9161-3dcc-45d4-ac56-764c883c5e1e",
+            "name": "Test event",
+            "functionId": "7d1bb23f-b159-4e9b-81fb-f82b18724e88",
+            "event": "{\r\n    \"version\": \"1.0\",\r\n    \"session\": {\r\n        \"new\": false,\r\n        \"sessionId\": \"amzn1.echo-api.session.123456789012\",\r\n        \"application\": {\r\n            \"applicationId\": \"amzn1.ask.skill.987654321\"\r\n        },\r\n        \"attributes\": {},\r\n        \"user\": {\r\n            \"userId\": \"amzn1.ask.account.testUser\"\r\n        }\r\n    },\r\n    \"context\": {\r\n        \"AudioPlayer\": {\r\n            \"playerActivity\": \"IDLE\"\r\n        },\r\n        \"System\": {\r\n            \"application\": {\r\n                \"applicationId\": \"amzn1.ask.skill.987654321\"\r\n            },\r\n            \"user\": {\r\n                \"userId\": \"amzn1.ask.account.testUser\"\r\n            },\r\n            \"device\": {\r\n                \"supportedInterfaces\": {\r\n                    \"AudioPlayer\": {}\r\n                }\r\n            }\r\n        }\r\n    },\r\n    \"request\": {\r\n        \"type\": \"IntentRequest\",\r\n        \"requestId\": \"amzn1.echo-api.request.1234\",\r\n        \"timestamp\": \"2016-10-27T21:06:28Z\",\r\n        \"locale\": \"en-US\",\r\n        \"intent\": {\r\n            \"name\": \"MyColorIsIntent\",\r\n            \"slots\": {\r\n                \"Color\": {\r\n                    \"name\": \"Color\",\r\n                    \"value\": \"blue\"\r\n                }\r\n            }\r\n        }\r\n    }\r\n}",
+            "eventTemplate": "alexa-skills-kit-intent-mycoloris"
           }
         }
       }
@@ -80,7 +80,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1572260049944
+    "lastSave": 1572260098596
   },
   "VCS_STATE": {
     "provider": "GitHub",
