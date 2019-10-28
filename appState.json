@@ -40,42 +40,6 @@
     ],
     "currentFileId": "7d1bb23f-b159-4e9b-81fb-f82b18724e88",
     "resources": {
-      "s3as2TestLahiru": {
-        "name": "s3as2TestLahiru",
-        "type": "S3",
-        "config": {
-          "mode": 1,
-          "bucket": {
-            "region": "us-east-1",
-            "name": "as2-test-lahiru"
-          }
-        }
-      },
-      "s3awsAmplifyHotspaces": {
-        "name": "s3awsAmplifyHotspaces",
-        "type": "S3",
-        "config": {
-          "mode": 1,
-          "bucket": {
-            "region": "us-east-1",
-            "name": "aws-amplify-hotspaces"
-          }
-        }
-      },
-      "s3comsigmatest318300609668chamathusEast1": {
-        "name": "s3comsigmatest318300609668chamathusEast1",
-        "type": "S3",
-        "config": {
-          "mode": 1,
-          "bucket": {
-            "region": "us-east-1",
-            "name": "com.sigma.test.318300609668.chamath.us-east-1"
-          },
-          "destinationBucket": {
-            "name": "com.sigma.test.318300609668.google11681355567701687.us-east-1"
-          }
-        }
-      },
       "cognitottt": {
         "name": "cognitottt",
         "type": "CognitoIdentityServiceProvider",
@@ -232,6 +196,42 @@
             }
           }
         }
+      },
+      "s3as2TestLahiru": {
+        "name": "s3as2TestLahiru",
+        "type": "S3",
+        "config": {
+          "mode": 1,
+          "bucket": {
+            "region": "us-east-1",
+            "name": "as2-test-lahiru"
+          }
+        }
+      },
+      "s3awsAmplifyHotspaces": {
+        "name": "s3awsAmplifyHotspaces",
+        "type": "S3",
+        "config": {
+          "mode": 1,
+          "bucket": {
+            "region": "us-east-1",
+            "name": "aws-amplify-hotspaces"
+          }
+        }
+      },
+      "s3comsigmatest318300609668chamathusEast1": {
+        "name": "s3comsigmatest318300609668chamathusEast1",
+        "type": "S3",
+        "config": {
+          "mode": 1,
+          "bucket": {
+            "region": "us-east-1",
+            "name": "com.sigma.test.318300609668.chamath.us-east-1"
+          },
+          "destinationBucket": {
+            "name": "com.sigma.test.318300609668.google11681355567701687.us-east-1"
+          }
+        }
       }
     },
     "customTemplate": {
@@ -250,11 +250,6 @@
     ],
     "packageJSON": {
       "dependencies": {
-        "mysql": {
-          "name": "mysql",
-          "version": "2.17.1",
-          "language": "javascript"
-        },
         "test": {
           "name": "test",
           "version": "0.6.0",
@@ -277,7 +272,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1572263948423
+    "lastSave": 1572264663542
   },
   "VCS_STATE": {
     "provider": "GitHub",
