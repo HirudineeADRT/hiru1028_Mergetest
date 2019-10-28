@@ -22,12 +22,12 @@
         "children": [],
         "isRemovable": true,
         "filePath": "hiru1028_Mergetest/lambda.js",
-        "code": "exports.handler = function(event, context, callback) {\n    \n    callback(null, {\"message\": \"Successfully executed\"});\n}",
+        "code": "exports.handler = function(event, context, callback) {\n    //test\n    callback(null, {\"message\": \"Successfully executed\"});\n}",
         "config": {
-          "runtime": "nodejs8.10",
+          "runtime": "nodejs10.x",
           "handler": "handler",
-          "timeout": 60,
-          "memory": 128,
+          "timeout": 141,
+          "memory": 384,
           "layers": []
         },
         "triggers": []
@@ -64,7 +64,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1572258582142
+    "lastSave": 1572259147840
   },
   "VCS_STATE": {
     "provider": "GitHub",
