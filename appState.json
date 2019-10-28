@@ -22,12 +22,12 @@
         "children": [],
         "isRemovable": true,
         "filePath": "hiru1028_Mergetest/lambda.js",
-        "code": "exports.handler = function(event, context, callback) {\n    //test\n    callback(null, {\"message\": \"Successfully executed\"});\n}",
+        "code": "exports.handler = function(event, context, callback) {\n    \n    callback(null, {\"message\": \"Successfully executed\"});\n}",
         "config": {
-          "runtime": "nodejs10.x",
+          "runtime": "nodejs8.10",
           "handler": "handler",
-          "timeout": 141,
-          "memory": 384,
+          "timeout": 60,
+          "memory": 128,
           "layers": []
         },
         "triggers": []
