@@ -1,0 +1,76 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "56fda8d8-cbc7-458c-a465-6f3040f88c9d": {
+        "id": "56fda8d8-cbc7-458c-a465-6f3040f88c9d",
+        "parent": null,
+        "name": "hiru1028_Mergetest",
+        "type": "DIRECTORY",
+        "isDirectory": true,
+        "children": [
+          "7d1bb23f-b159-4e9b-81fb-f82b18724e88"
+        ],
+        "isRemovable": false,
+        "filePath": "hiru1028_Mergetest"
+      },
+      "7d1bb23f-b159-4e9b-81fb-f82b18724e88": {
+        "id": "7d1bb23f-b159-4e9b-81fb-f82b18724e88",
+        "parent": "56fda8d8-cbc7-458c-a465-6f3040f88c9d",
+        "name": "lambda.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "hiru1028_Mergetest/lambda.js",
+        "code": "exports.handler = function(event, context, callback) {\n    \n    callback(null, {\"message\": \"Successfully executed\"});\n}",
+        "config": {
+          "runtime": "nodejs8.10",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": []
+        },
+        "triggers": []
+      }
+    },
+    "rootNode": "56fda8d8-cbc7-458c-a465-6f3040f88c9d",
+    "openFiles": [
+      "7d1bb23f-b159-4e9b-81fb-f82b18724e88"
+    ],
+    "currentFileId": "7d1bb23f-b159-4e9b-81fb-f82b18724e88",
+    "resources": {},
+    "customTemplate": {
+      "dialect": null,
+      "definitions": null
+    },
+    "envVariables": [
+      {
+        "lambdaId": "all",
+        "varKey": "SIGMA_AWS_ACC_ID",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      }
+    ],
+    "packageJSON": {
+      "dependencies": {}
+    }
+  },
+  "PROJECT_META": {
+    "projectName": "hiru1028_Mergetest",
+    "projectDescription": "",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east-1",
+    "platform": "AWS",
+    "platformRegions": {},
+    "lastSave": 1572258582142
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "hiru1028_Mergetest",
+      "url": "https://github.com/HirudineeADRT/hiru1028_Mergetest"
+    }
+  }
+}
